@@ -1,0 +1,101 @@
+@charset "utf-8";
+
+*{
+    box-sizing: border-box;    
+}
+
+body{
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6rem;
+    font-weight: bold;
+    color: #cccccc;
+    background-color: #000;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin-top: 0;
+}
+
+/* container */
+section .inner{
+   width: 1200px;
+   margin: auto;
+   margin-top: 50px;
+}
+
+/* title */
+.inner h1{
+    color: #fff;
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* ABOUT BLOCK */
+section .inner .about-me{
+    background-color: #1f1f1f;
+    padding: 25px;
+    column-count: 3;
+    column-gap: 50px;
+    column-rule: 1px dashed #666;
+    margin: 20px 0;
+}
+
+/* heading */
+section .inner .about-me h2{
+    column-span: all;
+    position: relative;
+    z-index: 1;
+    color: #fff;
+}
+
+/* highlight line */
+section .inner .about-me h2:before{
+   content: '';
+   position: absolute;
+   background-color: #ffffff;
+   width: 180px;
+   height: 25px;
+   z-index: -1;
+   transform: translateY(10px);
+   opacity: 0.2;
+}
+
+/* image */
+section .inner .about-me img{
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+    section .inner{
+        width: 100%;
+        padding: 10px;
+    }
+
+    .inner h1{
+        font-size: 2rem;
+    }
+
+    section .inner .about-me{
+        column-count: 1;
+    }
+}
+
+@media(min-width:768px) and (max-width:1024px){
+    section .inner{
+        width: 100%;
+        padding: 10px;
+    }
+
+    .inner h1{
+        font-size: 3rem;
+    }
+
+    section .inner .about-me{
+        column-count: 2;
+    }
+}
